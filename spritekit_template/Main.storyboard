@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IgQ-lp-ehN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="Fzc-0d-VuU">
+            <objects>
+                <viewController id="IgQ-lp-ehN" customClass="GameViewController" customModule="spritekit_template" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yAk-BS-yJj"/>
+                        <viewControllerLayoutGuide type="bottom" id="sTm-yw-64s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GAh-5c-fMK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-Cc-Yqt" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ndw-Cc-Yqt" secondAttribute="height" multiplier="40:71" id="JHm-UJ-2qb"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1024" id="xrb-V8-v93"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ndw-Cc-Yqt" firstAttribute="top" secondItem="GAh-5c-fMK" secondAttribute="top" id="EAO-tI-lCw"/>
+                            <constraint firstItem="sTm-yw-64s" firstAttribute="top" secondItem="ndw-Cc-Yqt" secondAttribute="bottom" id="O93-5o-I6q"/>
+                            <constraint firstAttribute="centerX" secondItem="ndw-Cc-Yqt" secondAttribute="centerX" id="Z8m-LT-HV5"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="gameView" destination="ndw-Cc-Yqt" id="ruL-Kd-KKm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glD-PT-sgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="172"/>
+        </scene>
+    </scenes>
+</document>

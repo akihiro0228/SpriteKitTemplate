@@ -8,8 +8,8 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
-    
+class GameScene: BaseScene {
+
     override init(size: CGSize) {
         super.init(size: size)
     }
@@ -17,11 +17,16 @@ class GameScene: SKScene {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+
+        let skNode = SKSpriteNode(color: UIColor.blueColor(), size: fSize(100, 100))
+        skNode.position = fPoint(320, 568)
+
+        self.addChild(skNode)
     }
-    
+
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
         
@@ -29,7 +34,7 @@ class GameScene: SKScene {
             let location = touch.locationInNode(self)
         }
     }
-   
+
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }

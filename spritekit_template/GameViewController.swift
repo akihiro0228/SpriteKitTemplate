@@ -10,20 +10,17 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-    
-    override func loadView() {
-        self.view = SKView(frame: UIScreen.mainScreen().bounds)
-    }
+    @IBOutlet weak var gameView: SKView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let skView = self.view as! SKView
+        let skView = self.gameView as SKView
         skView.showsDrawCount = true
         skView.showsNodeCount = true
         skView.showsFPS       = true
         
-        let scene = GameScene(size: self.view.bounds.size)
+        let scene = GameScene(size: self.gameView.bounds.size)
         skView.presentScene(scene)
     }
 
