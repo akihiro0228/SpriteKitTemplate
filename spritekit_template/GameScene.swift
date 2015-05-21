@@ -20,19 +20,10 @@ class GameScene: BaseScene {
 
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-
-        let skNode = SKSpriteNode(color: UIColor.blueColor(), size: fSize(100, 100))
-        skNode.position = fPoint(320, 568)
-
-        self.addChild(skNode)
     }
 
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
-        for touch in (touches as! Set<UITouch>) {
-            let location = touch.locationInNode(self)
-        }
     }
 
     override func update(currentTime: CFTimeInterval) {
